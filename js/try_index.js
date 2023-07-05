@@ -1,5 +1,6 @@
 "use strict";
-//import Figure from './Figure.js';
+
+import {Figure} from './Figure.js';
 //import Circle from './Circle.js';
 //import Rectangle from './Rectangle.js';
 //import Square from './Square.js';
