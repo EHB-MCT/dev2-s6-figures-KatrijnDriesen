@@ -1,6 +1,6 @@
 "use strict";
 
-import {Figure} from './Figure.js';
+import {Figure} from './try_figure.js';
 
 export class Circle extends Figure {
     constructor (radius) {
@@ -17,7 +17,7 @@ export class Circle extends Figure {
         return 2 * this._radius * Math.PI;
     }
     get htmlString () {
-        return ´
+        return `
         <div class="result">
             <div class="figure circle" style="width: DIAMETERpx; height: DIAMETERpx;"></div>
             <div class="infoBox">
@@ -36,6 +36,6 @@ export class Circle extends Figure {
                 <dd>CIRCUMFERENCE px</dd>
                 </dl>
             </div>
-            </div>´
+            </div>`;
     }
 }

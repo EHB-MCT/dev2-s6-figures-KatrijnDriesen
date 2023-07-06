@@ -1,10 +1,10 @@
 "use strict";
 
-import {Figure} from './Figure.js';
+import {Figure} from './try_figure.js';
 
 export class Rectangle extends Figure{
     constructor (width, height) {
-        super ("rectangle");
+        super ("Rectangle");
         this._width = width;
         this._height = height;
     }
@@ -15,7 +15,7 @@ export class Rectangle extends Figure{
         return (this._width * this._height)*2;
     }
     get htmlString () {
-        return ´<div class="result">
+        return `<div class="result">
         <div class="figure rectangle" style="width: WIDTHpx; height: HEIGHTpx;"></div>
         <div class="infoBox">
           <h3>${this.name}</h3>
@@ -33,6 +33,6 @@ export class Rectangle extends Figure{
             <dd>CIRCUMFERENCE px</dd>
           </dl>
         </div>
-      </div>´
+      </div>`;
     }
 }
