@@ -40,15 +40,15 @@ const form = {
         const inputValue = document.getElementById("select").value;
         let figure;
             if (inputValue == 'circle'){
-            const radius = document.getElementById('radius').value;
-            figure = new Circle(radius);
+                const radius = document.getElementById('radius').value;
+                figure = new Circle(radius);
             } else if (inputValue == 'square') {
                 const size = document.getElementById('size').value;
                 figure = new Square(size);  
             } else if (inputValue == 'rectangle') {
                 const width = document.getElementById('width').value;
                 const height = document.getElementById('height').value;
-                figure = new Square(width,height);  
+                figure = new Rectangle(width,height);  
             }
         const results = document.getElementById('results');
         results.innerHTML = figure.htmlString;
