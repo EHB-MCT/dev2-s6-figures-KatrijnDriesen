@@ -12,7 +12,7 @@ const form = {
         
         const inputFields = document.getElementById('otherInputs');
         let htmlString = "";
-        
+
         if (this.value == "circle") {
             htmlString += form.inputElementsWithLabel("radius (px)","radius");
         } else if (this.value == "square") {
@@ -36,10 +36,22 @@ const form = {
         </label>`;
     },
     submitForm(event) {
-        console.log("log submitForm functie");
         event.preventDefault();
-        const inputValue = document.getElementById("otherInputs").value;
-        console.log(inputValue);
+        const inputValue = document.getElementById("select").value;
+        let figure;
+            if (inputValue == 'circle'){
+            const radius = document.getElementById('radius').value;
+            figure = new Circle(radius);
+            } else if (inputValue == 'square') {
+                const size = document.getElementById('size').value;
+                figure = new Square(size);  
+            } else if (inputValue == 'rectangle') {
+                const width = document.getElementById('width').value;
+                const height = document.getElementById('height').value;
+                figure = new Square(width,height);  
+            }
+        const results = document.getElementById('results');
+        results.innerHTML = figure.htmlString;
     }
 };
 

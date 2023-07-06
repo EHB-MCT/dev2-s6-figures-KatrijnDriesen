@@ -4,7 +4,7 @@ import {Figure} from './try_figure.js';
 
 export class Rectangle extends Figure{
     constructor (width, height) {
-        super ("Rectangle");
+        super ("rectangle");
         this._width = width;
         this._height = height;
     }
